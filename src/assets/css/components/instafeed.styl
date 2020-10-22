@@ -1,4 +1,9 @@
 body
+    .btn-blue
+        background-color $windows-blue
+        color white
+        font-weight 600
+        font-size 1rem
 
     #instagram__list
         position relative
@@ -21,6 +26,25 @@ body
                     content none
 
     .socials
+        &__header
+
+            > div
+                display flex
+                justify-content center
+                flex-direction column
+
+                font($brownish-grey, .9rem, 400, normal, normal)
+
+                p
+                    margin-top 15px
+                    margin-bottom 15px
+
+            h2
+                font($light-navy-blue, 2rem, 700, normal, normal)
+
+            h4
+                font-size 1.3rem
+
         &__title
             font-size 1.7rem
             font-weight 500
@@ -39,6 +63,7 @@ body
             strong
                 color $windows-blue
                 font-weight 500
+                margin-right 8px
 
             svg
                 width 20px

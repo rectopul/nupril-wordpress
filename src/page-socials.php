@@ -11,6 +11,20 @@
 get_header(); ?>
 
 <div class="container">
+    <div class="row socials__header">
+        <div class="col md-6 d-flex flex-column">
+            <h2><?php the_title(); ?></h2>
+            <?php the_content(); ?>
+        </div>
+
+        <div class="col md-6">
+            <?php
+            if (has_post_thumbnail()) {
+                the_post_thumbnail('full', ['class' => 'socials__header--thumb']);
+            }
+            ?>
+        </div>
+    </div>
 
     <!-- Instagram -->
     <div class="row socials__title">
@@ -62,7 +76,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="row" id="instagram__list">
+    <div class="row mb-5" id="instagram__list">
         <div class="col-12">
             <!-- Swiper -->
             <div class="swiper-container socials__container youtube__container">

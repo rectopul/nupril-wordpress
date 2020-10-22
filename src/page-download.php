@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<div class="container my-5">
+<div class="container my-5 pb-md-5">
     <div class="row">
         <div class="col-md-6 download">
             <h2 class="download__title"><?php the_title(); ?></h2>

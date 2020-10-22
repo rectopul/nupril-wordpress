@@ -503,17 +503,6 @@ function add_additional_class_on_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
-function wpb_first_and_last_menu_class($items)
-{
-    $items[1]->classes[] = 'first-menu-item'; // add first class
-    $cnt = count($items);
-    while ($items[$cnt--]->post_parent != 0); // find last li item
-    $items[$cnt + 1]->classes[] = 'button-pink'; // last item class
-
-    return $items;
-}
-add_filter('wp_nav_menu_objects', 'wpb_first_and_last_menu_class');
-
 /**
  * Rotas api
  */

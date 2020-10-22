@@ -64,9 +64,6 @@ header .navbar-light .navbar-nav .nav-link {
     display: flex;
     margin-left: 10px;
 }
-header .navbar-light .navbar-nav .nav-item:last-child {
-    margin-left: 70px;
-}
 header .navbar-light .navbar-nav .button-pink a {
     padding: 0px 30px;
     color: #fff;

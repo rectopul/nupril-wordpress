@@ -19,6 +19,27 @@
             border-radius 10px
             align-items center
             max-height 295px
+            
+        .swiper-button-next,
+        .swiper-button-prev
+                
+            &:after
+                content none !important
+
+            &.first-next
+                right -20px
+
+            &.first-prev
+                left -20px
+
+                svg
+                    transform rotate(-180deg)
+
+            svg
+                fill white
+                width 16px
+                height 30px
+            
 
     &__text
         display flex

@@ -16,8 +16,8 @@ var categoriesSwiper = new Swiper('.categories .swiper-container', {
     slidesPerView: 2,
     spaceBetween: 22,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-cat-p-next',
+      prevEl: '.swiper-cat-p-prev',
     },
     // Responsive breakpoints
     breakpoints: {
@@ -45,8 +45,8 @@ var firstProducts = new Swiper('.first-products__products .swiper-container', {
   slidesPerView: 2,
   spaceBetween: 30,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.first-next',
+    prevEl: '.first-prev',
   },
 });
 
@@ -653,14 +653,36 @@ const filter = (() => {
       getTermChildren(input.value).then(handleCities).catch(console.log)
     });
   }
+
+  function triggerSelect(selector) {
+    const targets = [...document.querySelectorAll(selector)];
+
+    if(!targets.length) return
+
+    targets.map(item => {
+      item.addEventListener('click', function (e) {
+        const id = item.dataset.id
+
+        if(!id) return 
+
+        item.closest('.form-group').querySelector('select').value = id
+
+        item.closest('.form-group').querySelector('select').dispatchEvent(new Event("change"))
+      });
+    })
+  }
   
   return {
     //public var/functions
     select,
     handleLocation,
-    filterApply
+    filterApply,
+    triggerSelect
   }
 })()
+
+//.filter-first-select--item
+filter.triggerSelect('.filter-first-select--item')
 
 filter.select('.form-control#estado')
 filter.handleLocation('.form-control#cidade')

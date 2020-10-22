@@ -27,15 +27,16 @@ get_header(); ?>
         <div class="swiper-wrapper">
             <?php get_template_part('template-parts/content', 'categories'); ?>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
+
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-cat-p-next"></div>
+    <div class="swiper-button-prev swiper-cat-p-prev"></div>
 
 </section>
 
 <!-- Sobre a empresa -->
-<div class="container content-about py-5">
+<div class="container content-about py-md-5">
     <div class="row">
         <div class="col-md-5 content-about__text">
             <h2>História da Empresa</h2>
@@ -53,7 +54,7 @@ get_header(); ?>
 </div>
 
 <!-- Sede da empresa -->
-<div class="thirst container py-5">
+<div class="thirst container py-4 py-md-5">
     <div class="row">
 
         <div class="col-md thirst__image pr-md-5">
@@ -88,6 +89,10 @@ get_header(); ?>
                     'first' => true,
                     'limit' => 6
                 ]); ?>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next first-next"><?php svg_sprite('arrow'); ?></div>
+                <div class="swiper-button-prev first-prev"><?php svg_sprite('arrow'); ?></div>
             </div>
 
         </div>
@@ -95,7 +100,7 @@ get_header(); ?>
 </div>
 
 <!-- timeline -->
-<div class="timeline container py-5">
+<div class="timeline container py-md-5">
     <div class="col-12 my-5">
         <h4>Evolução da linha e do mercado</h4>
     </div>
@@ -118,6 +123,8 @@ get_header(); ?>
     <div class="col-12 blocks__title">
         <h2>Qualidade Nupill</h2>
         <h4>Os pilares da nossa política de qualidade.</h4>
+        <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut diam quam. <br>
+            Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor:</article>
     </div>
 
     <div class="col-12">
@@ -154,6 +161,8 @@ get_header(); ?>
         </div>
     </div>
 </div>
+
+<hr class="separator">
 
 <!-- Compromisso -->
 <div class="container commitment pt-5">

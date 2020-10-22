@@ -26,7 +26,7 @@ get_header(); ?>
 
                 <div class="block-loja">
                     <h3>Compre na loja virtual:</h3>
-                    <p>
+                    <p class="mt-md-3">
                         <a href="#">
                             <?php
                             if (has_post_thumbnail()) {
@@ -82,6 +82,28 @@ get_header(); ?>
 
                             ?>
                         </select>
+
+                        <div class="filter-first-select">
+                            <?php
+
+                            $terms = get_terms(array(
+                                'taxonomy' => 'shop_location',
+                                'hide_empty' => false,
+                            ));
+
+
+                            foreach ($terms as $term) {
+                                if (!$term->parent) {
+                                    printf(
+                                        '<div class="filter-first-select--item" data-id="%s">%s</div>',
+                                        $term->term_id,
+                                        $term->name
+                                    );
+                                }
+                            }
+
+                            ?>
+                        </div>
                     </div>
 
                     <div class="form-group col-lg-3 col-sm-6 col-xs-12">

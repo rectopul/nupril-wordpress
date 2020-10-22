@@ -29,7 +29,7 @@
 
         <div class="download col-lg-3 col-sm-4 col-xs-12">
             <h3>Downloads</h3>
-            <p><a href="/download"><span>Clique aqui</span> para baixar nossos materiais institucionais (logos, lâminas, fotos de produtos, banners, etc).</a></p>
+            <p><a href="/download"><span>Clique aqui</span></a> para baixar nossos materiais institucionais (logos, lâminas, fotos de produtos, banners, etc).</p>
         </div>
 
         <div class="col-lg-3 col-sm-6 col-xs-12">
