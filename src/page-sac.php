@@ -26,9 +26,23 @@ get_header(); ?>
                 <p>Estamos prontos para atendê-lo para tirar qualquer dúvida, seja você parceiro, revendedor ou cliente final. Entre em contato pelos endereços abaixo:</p>
 
                 <div class="contact">
-                    <p><a href="tel:+551144868977" target="_blank"><span>Fixo</span> (11) 4486-8977</a></p>
-                    <p><a href="https://api.whatsapp.com/send?phone=5500999999999&text=Olá,%20escreva%20aqui" target="_blank"><span>Whatsapp</span> (00) 00000-0000</a></p>
-                    <p><a href="mailto:faleconosco@nupill.com.br" target="_blank"><span>E-mail</span> faleconosco@nupill.com.br</a></p>
+                    <p>
+                        <a href="tel:+55<?php echo preg_replace('/[^0-9]/', '', get_the_contact_phone()); ?>" target="_blank">
+                            <span>Fixo</span> <?php the_contact_phone(); ?>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://api.whatsapp.com/send?phone=55<?php echo preg_replace('/[^0-9]/', '', get_the_contact_cell()); ?>&text=Olá,%20escreva%20aqui" target="_blank">
+                            <span>Whatsapp</span> <?php the_contact_cell(); ?>
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="mailto:<?php the_contact_mail(); ?>" target="_blank">
+                            <span>E-mail</span>
+                            <?php the_contact_mail(); ?>
+                        </a>
+                    </p>
                 </div>
 
                 <!-- bloco Form Contact -->

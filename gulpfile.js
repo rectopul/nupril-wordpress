@@ -210,9 +210,8 @@ const url = `http://localhost:8004` // Change me
 function startTask(done) {
     server.init(
         {
-            proxy: url,
             notify: true,
-            port: 3333,
+            baseDir: "./"
         },
         done
     )

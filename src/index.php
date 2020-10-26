@@ -78,9 +78,7 @@ get_header(); ?>
             <div class="col-md-6 first-products__text">
                 <h4>Os primeiros produtos</h4>
 
-                <article class="mt-md-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut diam quam. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor.
-                </article>
+                <article class="mt-md-3"><?php first_products_content(); ?></article>
             </div>
 
             <div class="col-md-6 first-products__products">

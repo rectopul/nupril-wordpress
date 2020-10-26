@@ -250,6 +250,13 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
  * Insert custom controls from this theme
  */
 require_once get_template_directory() . '/inc/rmbCustomControls.php';
+require_once get_template_directory() . '/inc/custom-controls/panels.php';
+require_once get_template_directory() . '/inc/custom-controls/sections.php';
+require_once get_template_directory() . '/inc/custom-controls/settings.php';
+require_once get_template_directory() . '/inc/custom-controls/controls.php';
+require_once get_template_directory() . '/inc/custom-controls/callbacks.php';
+require_once get_template_directory() . '/inc/custom-controls/partials.php';
+
 /**
  * Implement the Custom Controls form madison.
  */
