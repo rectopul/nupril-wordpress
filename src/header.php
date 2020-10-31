@@ -121,3 +121,12 @@
                 </div>
             </div>
         <?php endif; ?>
+
+        <?php if (is_page_template('page-socials.php')) : ?>
+            <script>
+                var tokens = {
+                    instagram: <?php echo get_theme_mod('insta_token'); ?>,
+                    facebook: <?php echo get_theme_mod('face_token'); ?>,
+                }
+            </script>
+        <?php endif; ?>

@@ -1,0 +1,36 @@
+html {
+               margin-bottom: 0px;
+                }
+
+
+
+ul.miolo-tabs {
+	right: 80px;
+                }
+
+/* Attention IE6
+-----------------------------------------------------------*/
+#attention_ie6 {
+	width: 100%;
+	background: url(../_imagens/jquery/attention_ie6_shield.gif) 26% 50% no-repeat #fffee6;
+	top:0;
+	z-index: 99;
+	margin: 0px;
+	padding: 0px;
+}
+#attention_ie6 a {
+	width: 72%;
+	height: 25px;
+	text-transform: none;
+	text-decoration: none;
+	border-bottom: 1px solid #929384;
+	background: url(../_imagens/jquery/attention_ie6_close.gif) 97% 50% no-repeat;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 28%;
+}

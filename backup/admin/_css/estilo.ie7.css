@@ -1,0 +1,4 @@
+html, body {
+	margin:0px;
+	height:100%; /* make sure we'll use 100% of the page's height */
+}

@@ -447,19 +447,23 @@ const api = (() => {
 
 const btnLoadPosts = document.querySelector('.load-more-posts');
 
-const faceTokenGenerated = `EAAFn8ZCiTCHcBAMOZAzCUAOWxsPs1jIG0SV5M7cNiezZAgZCEAfcVqJ0vKPDzNunxMOcW2TctQ4k3dL6kyGTPt1tIGLF3q3EQfNz87OTmxnKcbxYNZBaHeDC1I88CdXo0o943wf27yVMyNdYZBvfgy7SVa4YZCfvIKqKP25gbmoQJmZA9XtU6yVRo0q8n6PX8B7OsMZBvYzdLO0bOhe0nrbjk`
+
 
 api.loadMorePosts('.load-more-posts')
 
-api.faceFeed(
-  faceTokenGenerated, 
-  '102213031683298', 
-  '.facebook__container'
-)
+if(document.body.classList.contains('page-template-page-socials')) {
 
-api.getInstagram(
-  '.instagram__list--container', 'IGQVJXaFhjX1dLaWY1cW16eV9fRUdMeXg5dDBXQlVIb19wSjZAvR3Vxby14UXRacEtEd3EyM09MQnluX2hSRFlXdzJxSXduUHVFcEFPbThpdlYzQmtiZAnFWTVM5cC1oSktOSWNrYjdVRllkVERLVlBBawZDZD'
-)
+  api.faceFeed(
+    tokens.facebook, 
+    '102213031683298', 
+    '.facebook__container'
+  )
+  
+  api.getInstagram(
+    '.instagram__list--container', tokens.instagram
+  )
+}
+
 
 //Youtube videos //youtube__container
 //timeline

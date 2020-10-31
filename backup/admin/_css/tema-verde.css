@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* Estilo Verde para o sistema */
+
+a { color: #57a000; }
+.botao {
+	background-color: #459300;
+	background-image: url(../_imagens/sprite_background_hor.png);
+	background-position: left -96px;
+	border: 1px solid #459300;
+                }
+#barra-esquerda #menu-lateral li a.item {
+	background-image: url(../_imagens/sprite_background_hor.png);
+	background-position: right -244px;
+	background-color: transparent;
+                }
+				
+#barra-esquerda #menu-lateral li a.item:hover { color: #333; }
+
+#barra-esquerda #menu-lateral li a.ativo { color: #333; }
+                
+#barra-esquerda #menu-lateral li a.ativo:hover { color: #499300; }
+
+#barra-esquerda #menu-lateral li a.item span.mostrar{
+	background-image: url(../_imagens/icones/sprite_icones.png);
+	background-position: left -772px;
+                }
+#barra-esquerda #menu-lateral li a.item span.esconder{
+	background-image: url(../_imagens/icones/sprite_icones.png);
+	background-position: right -772px;
+                }
+
+.paginacao a.ativo {
+				background-color: #459300;
+                background-image: url(../_imagens/sprite_background_hor.png);
+				background-position: left -96px;
+				background-repeat: repeat-x;
+                border-color: #459300;
+                }
+
+.botao-atalho span:hover {	color: #57a000;   }

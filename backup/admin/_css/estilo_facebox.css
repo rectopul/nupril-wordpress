@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/*************** Formulrios ***************/
+
+form label {
+	display: block;
+	font-weight: bold;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+	color: #000;
+                }
+/*************** Formulrios ***************/
+
+form label.minimo {
+	display: block;
+	font-weight: bold;
+	color: #000;
+	float: left;
+	width: 80px;
+	line-height: 35px;
+	padding: 0;
+                }
+             
+form fieldset legend {
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	font-size: 16px;
+	float: none;
+	width: 80%;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	padding-bottom: 2px;
+	color: #666;
+	display: block;
+	margin-top: 10px;
+                }
+                
+form p small {
+	font-size: 10px;
+	color: #777;
+	padding-left: 7px;
+                }
+				
+form input.input-texto,
+form select,
+form textarea,
+form .wysiwyg {
+                padding: 6px;
+                font-size: 13px;
+                background: #fff url('../_imagens/bg-campo-formulario.gif') top left repeat-x;
+                border: 1px solid #d5d5d5;
+				color: #333;
+                }
+form .input-minimo {
+	width: 5% !important;
+                }
+            
+form .input-menor {
+	width: 15% !important;
+                }
+                
+form .input-medio {
+	width: 50% !important;
+                }
+                
+form .input-grande {
+	width: 97% !important;
+                }
+form .input-minitable {
+	width: 75px !important;
+                }
+form label.invalido {
+	color: #F00;
+	width: auto;
+	padding-left: 20px;
+	background-image: url(../_imagens/icones/sprite_icones.png);
+	background-position: -12px -333px;
+	background-repeat: no-repeat;
+	line-height: 30px;
+	display: inline;
+	padding-bottom: 15px;
+			}
+form input.invalido {
+	border: 1px solid #F00;
+	margin-right: 7px;
+				}
+
+form input.valido {
+	border: 1px solid #6F0;
+				}
+                
+form textarea {
+	width: 97% !important;
+	font-family: Arial, Helvetica, sans-serif;
+                }
+form textarea.invalido {
+	border: 1px solid #F00;
+	margin-right: 7px;
+				}
+form textarea.valido {
+	border: 1px solid #6F0;
+				}
+                
+form select {
+                padding: 4px;
+                background: #fff;
+                }
+form select.invalido {
+	border: 1px solid #F00;
+	margin-right: 7px;
+				}
+form select.valido {
+	border: 1px solid #6F0;
+				}
+				
+form input[type="checkbox"],
+form input[type="radio"] {
+				padding: 0;
+                background: none;
+				border: 0;
+                }
+form div#select_marcas {
+	display: none;
+
+				}
+form div#select_categorias {
+	display: none;
+
+				}
+form div#select_subcategorias {
+	display: none;
+
+				}
+form div#campo_rastreamento {
+	display: none;
+
+				}

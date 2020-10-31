@@ -43,6 +43,18 @@ function rmb_customize_sections($wp_customize)
      * Sede da empresa
      */
 
+    $wp_customize->add_section('socials_token', array(
+        'title'    => __('Tokens de acesso', 'auaha'),
+        'capability' => 'edit_theme_options',
+        'description' => __('Informe os tokens de acesso para integração com a ferramenta interna'),
+        'priority' => 2,
+        'panel'            => 'panel_home'
+    ));
+
+    /**
+     * Sede da empresa
+     */
+
     $wp_customize->add_section('company_location', array(
         'title'    => __('Informações de localização', 'auaha'),
         'capability' => 'edit_theme_options',
@@ -450,6 +462,28 @@ function rmb_customize_settings($wp_customize)
         'section' => 'social_net',
         'sanitize_callback' => 'wp_kses_post',
     ));
+
+    /**
+     * Tokens de acesso api facebook, instagram
+     * insta_token, face_token
+     */
+
+    $wp_customize->add_setting('insta_token', array(
+        'default'           => '',
+        'section'           => 'socials_token',
+        'sanitize_callback' => 'wp_kses_post',
+    ));
+
+
+    $wp_customize->get_setting('insta_token')->transport = 'postMessage';
+    $wp_customize->add_setting('face_token', array(
+        'default'           => '',
+        'section'           => 'socials_token',
+        'sanitize_callback' => 'wp_kses_post',
+    ));
+
+
+    $wp_customize->get_setting('face_token')->transport = 'postMessage';
 }
 add_action('customize_register', 'rmb_customize_settings');
 
@@ -642,6 +676,23 @@ function rmb_custom_controls($wp_customize)
             'label' => __('Imagem do do bloco compromisso', 'domain'),
             'description' => __('Selecione a imágem do bloco compromisso', 'domain')
         ]
+    ));
+
+    /**
+     * Tokens de acesso api facebook, instagram
+     * insta_token, face_token
+     */
+    $wp_customize->add_control('insta_token', array(
+        'type' => 'text',
+        'section' => 'socials_token', // // Add a default or your own section
+        'label' => __('Token de acesso instagram'),
+        'description' => __('Informe o token do instagram.'),
+    ));
+    $wp_customize->add_control('face_token', array(
+        'type' => 'text',
+        'section' => 'socials_token', // // Add a default or your own section
+        'label' => __('Token de acesso Facebook'),
+        'description' => __('Informe o token do Facebook.'),
     ));
 
     //--------------- BLOCOS DE COMPROMISSO
