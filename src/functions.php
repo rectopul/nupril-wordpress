@@ -547,6 +547,64 @@ function api_get_cities($data)
  * Rotas api
  */
 add_action('rest_api_init', function () {
+    register_rest_route('wp/v2', '/mail-send', array(
+        'methods' => 'POST',
+        'callback' => 'api_send_mail',
+    ));
+});
+
+function api_send_mail($request = null)
+{
+
+    $response = array();
+    $parameters = $request->get_json_params();
+
+    $name = sanitize_text_field($parameters['nome']);
+    $subject = sanitize_text_field($parameters['assunto']);
+    $message = sanitize_text_field($parameters['mensagem']);
+    $mail = sanitize_text_field($parameters['email']);
+    $phone = sanitize_text_field($parameters['telefone']);
+
+    $headers = array('Content-Type: text/html; charset=UTF-8', 'From: Nupill Wordpress - SAC &lt;support@example.com');
+
+    $adminMail = get_option('admin_email');
+
+    $thisMessage = 'O cliente ' . $name . ' - (Fone: ' . $phone . ') entrou em contato com o seguinte assunto: ' . $subject . ' <br>' .
+        $message;
+
+    $error = new WP_Error();
+
+    if (empty($adminMail)) {
+        $error->add(400, __("Erro in access e-mail sender.", 'wp-rest-user'), array('status' => 400));
+        return $error;
+    }
+
+    if (empty($name)) {
+        $error->add(400, __("Please inform the Name.", 'wp-rest-user'), array('status' => 400));
+        return $error;
+    }
+    if (empty($message)) {
+        $error->add(400, __("Please inform the Message.", 'wp-rest-user'), array('status' => 400));
+        return $error;
+    }
+    if (empty($mail)) {
+        $error->add(400, __("Please inform the Mail.", 'wp-rest-user'), array('status' => 400));
+        return $error;
+    }
+
+    if (wp_mail($adminMail, $subject, $thisMessage, $headers, null)) {
+        $response['code'] = 200;
+
+        $response['message'] = `Sua mensagem foi enviada com sucesso!`;
+    } else {
+        $error->add(400, __("Error in sendMail.", 'wp-rest-user'), array('status' => 400));
+        return $error;
+    };
+
+    return $response;
+}
+
+add_action('rest_api_init', function () {
     register_rest_route('wp/v2', '/location/(?P<id>\d+)', array(
         'methods' => 'GET',
         'callback' => 'api_get_locations',

@@ -36,7 +36,7 @@
             <h3>SAC - Fale conosco</h3>
             <p>
                 <a href="tel:+55<?php echo preg_replace('/[^0-9]/', '', get_the_contact_phone()); ?>" target="_blank">
-                    <span>Fixo</span> <?php the_contact_phone(); ?>
+                    <span>Tel.</span> <?php the_contact_phone(); ?>
                 </a>
             </p>
             <p>

@@ -29,10 +29,6 @@ get_header(); ?>
         </div>
     </div>
 
-    <!-- Add Arrows -->
-    <div class="swiper-button-next swiper-cat-p-next"></div>
-    <div class="swiper-button-prev swiper-cat-p-prev"></div>
-
 </section>
 
 <!-- Sobre a empresa -->
@@ -119,10 +115,8 @@ get_header(); ?>
 <!-- Qualidade commitment_image -->
 <div class="quality blocks container my-5">
     <div class="col-12 blocks__title">
-        <h2>Qualidade Nupill</h2>
-        <h4>Os pilares da nossa política de qualidade.</h4>
-        <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut diam quam. <br>
-            Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor:</article>
+        <h2><?php quality_title(); ?></h2>
+        <article><?php quality_content(); ?></article>
     </div>
 
     <div class="col-12">

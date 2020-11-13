@@ -113,7 +113,7 @@
         <?php endif; ?>
 
         <!-- check template -->
-        <?php if (is_page_template('categories.php')) : ?>
+        <?php if (is_page_template('categories.php') or is_post_type_archive('product')) : ?>
             <div class="container">
                 <!-- banner list -->
                 <div class="categories-banner swiper-container">
