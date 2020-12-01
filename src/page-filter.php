@@ -22,7 +22,7 @@ get_header(); ?>
             <div class="col-lg-6 col-sm-6 col-xs-12 order-1 order-sm-0 description">
                 <h1>Compre</h1>
                 <h3>Descubra onde a Nupill está.</h3>
-                <p>Compre na Kosmetic On-line ou procure o estabelecimento parceiro da Nupill mais próximo da sua casa.</p>
+                <p>Compre on-line ou procure o estabelecimento parceiro da Nupill mais próximo de você.</p>
 
                 <div class="block-loja">
                     <h3>Compre na loja virtual:</h3>

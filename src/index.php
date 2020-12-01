@@ -100,15 +100,9 @@ get_header(); ?>
     </div>
 
     <div class="col-12">
-        <?php get_template_part('template-parts/content', 'products', [
-            'carousel'   => true,
-            'first' => false,
-            'tag' => 'timeline',
-            'limit' => 12,
-            'order' => 'ASC',
-            'orderby' => 'ano_de_lancamento',
-            'text' => true
-        ]); ?>
+        <figure class="timeline__image">
+            <?php timeline_media(); ?>
+        </figure>
     </div>
 </div>
 

@@ -37,5 +37,22 @@ function customize_controls($wp_customize)
             'mediaButtons' => true,
         ]
     ]));
+
+    //timeline
+    /**
+     * Compromisso da empresa
+     * section: commitment
+     * name: commitment_image
+     */
+    $wp_customize->add_control(new WP_Customize_Media_Control(
+        $wp_customize,
+        'timeline_media', #setting/option_id
+        [
+            'mime_type' => 'image',
+            'section' => 'timeline',
+            'label' => __('Imagem da Timeline', 'domain'),
+            'description' => __('Selecione a imágem da timeline', 'domain')
+        ]
+    ));
 }
 add_action('customize_register', 'customize_controls');

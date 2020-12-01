@@ -11,12 +11,6 @@ if (!function_exists('rmb_theme_setup')) {
     }
 }
 
-/**
- * Enable api
- */
-
-wp_enqueue_script('wp-api');
-
 function rmb_theme_setup_support()
 {
 
@@ -57,6 +51,7 @@ function rmb_theme_setup_support()
     add_image_size('view_large', 710, 420, true);
     add_image_size('categories', 630, 365, true);
     add_image_size('product_small', 198, 198, false);
+    add_image_size('timeline', 1200, 368, false);
     // Custom logo.
     $logo_width  = 120;
     $logo_height = 90;
@@ -237,6 +232,12 @@ function rmb_register_styles()
 }
 
 add_action('wp_enqueue_scripts', 'rmb_register_styles');
+
+/**
+ * Enable api
+ */
+
+wp_enqueue_script('wp-api');
 
 
 /**

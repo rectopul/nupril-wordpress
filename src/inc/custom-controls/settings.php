@@ -11,18 +11,21 @@ function customize_settings($wp_customize)
 
     $wp_customize->add_setting('quality_title', array(
         'default'           => '',
-        'section'           => 'first_products',
+        'section'           => 'quality',
         'sanitize_callback' => 'wp_kses_post',
     ));
 
     $wp_customize->get_setting('quality_title')->transport = 'postMessage';
 
-    $wp_customize->add_setting('quality', array(
+    $wp_customize->add_setting('timeline_media', array(
         'default'           => '',
-        'section'           => 'first_products',
+        'section'           => 'timeline',
         'sanitize_callback' => 'wp_kses_post',
     ));
 
     $wp_customize->get_setting('quality')->transport = 'postMessage';
+
+    //Qualidade
+    //quality
 }
 add_action('customize_register', 'customize_settings');
